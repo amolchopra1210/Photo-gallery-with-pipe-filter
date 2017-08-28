@@ -1,0 +1,16 @@
+.thumbnail{
+    width : 200px;
+    height : 160px;
+    margin : 6px;
+    border : 2px solid #eee;
+    box-shadow: #555 1px 1px 8px 1px;
+    float : left;
+}
+ul{
+    padding: 0;
+    width : 1200px;
+    margin : 20px auto;
+}
+li{
+    display : inline;
+}

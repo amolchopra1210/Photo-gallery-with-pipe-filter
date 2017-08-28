@@ -1,0 +1,17 @@
+<p class="lead">
+  {{ title }}
+</p>
+<button class = 'btn btn-lg btn-info' [class.active] = "filterBy == 'all'" (click) = "filterBy = 'all'">All</button>
+<button class = 'btn btn-lg btn-info'[class.active] = "filterBy == 'boats'" (click) = "filterBy = 'boats'">Boats</button>
+<button class = 'btn btn-lg btn-info'[class.active] = "filterBy == 'camping'" (click) = "filterBy = 'camping'">Camping</button>
+<button class = 'btn btn-lg btn-info'[class.active] = "filterBy == 'books'" (click) = "filterBy = 'books'">Books</button>
+
+<div class = 'row'>
+  <ul id = 'thumbnailsList'>
+    <li *ngFor = "let image of (visibleImages | filter : filterBy)">
+      <a [routerLink] = "['/image', image.id]">
+       <img src = {{image.url}} class ='thumbnail'>
+      </a>
+    </li>
+  </ul>
+</div>
